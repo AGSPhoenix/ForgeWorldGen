@@ -38,8 +38,7 @@ class ForgeWorldGenCommand extends CommandBase {
     
 	@Override
 	public String getUsage(ICommandSender sender) {
-//		return "/fwg <x> <y> <dimension>";
-		return "what is the usage? it's a difficult question because usage is impossible to describe. one might ask the same about birds. what are birds? we just don't know.";
+		return "/fwg worldID lowX lowY highX highX";
 	}
 	
 	@Override

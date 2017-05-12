@@ -43,7 +43,6 @@ class FWGGenerationJob {
 	public void serverTickEvent(TickEvent.ServerTickEvent e) {
 		if (e.phase == Phase.START){return;}
 		
-//		ForgeWorldGen.instance.logger.info("ayyy");
 		//load some more chunks
 		
 		ChunkPos here = chunks.get(0);
