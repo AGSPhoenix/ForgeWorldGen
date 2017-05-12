@@ -78,36 +78,4 @@ class FWGGenerationJob {
 			sender.sendMessage(new TextComponentString(s));
 		}
 	}
-	
-//	private void generateShit(){
-//		Ticket ticket = ForgeChunkManager.requestTicket(ForgeWorldGen.instance, world, Type.NORMAL);
-//        
-//        if (sender.sendCommandFeedback()) {
-//			sender.sendMessage(new TextComponentString("generating shit 2"));
-//		}
-//        
-//        for (int i = 0; i < 30; i++) {
-//        	if (sender.sendCommandFeedback()) {
-//    			sender.sendMessage(new TextComponentString(i+"/30 stripes done"));
-//    		}
-//        	for (int j = 0; j < 30; j++) {
-//				ForgeChunkManager.forceChunk(ticket, new ChunkPos(i,j));	
-//			}
-//		}
-//        if (sender.sendCommandFeedback()) {
-//			sender.sendMessage(new TextComponentString("30/30 stripes done"));
-//		}
-////        if (sender.sendCommandFeedback()) {
-////			sender.sendMessage(new TextComponentString("shit generated, unloading"));
-////		}
-////        for (int i = 0; i < 100; i++) {
-////			for (int j = 0; j < 100; j++) {
-////				ForgeChunkManager.unforceChunk(ticket, new ChunkPos(i,j));	
-////			}
-////		}
-//        if (sender.sendCommandFeedback()) {
-//			sender.sendMessage(new TextComponentString("shit unloaded"));
-//		}
-//
-//	}
 }

@@ -59,14 +59,6 @@ class ForgeWorldGenCommand extends CommandBase {
     }
 	
 	World getWorldFromName(String s){
-//    	WorldServer[] Worlds = DimensionManager.getWorlds();
-//    	for (WorldServer world : Worlds)
-//    	{
-//    		if (world.getWorldInfo().getWorldName() == s)
-//    		{
-//    			return world;
-//    		}
-//    	}
     	return DimensionManager.getWorld(Integer.parseInt(s));
     	}
 }
