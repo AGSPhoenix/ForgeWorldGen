@@ -1,5 +1,6 @@
 package com.github.agsphoenix.forgeworldgen;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.text.TextComponentString;
@@ -32,8 +34,16 @@ class ForgeWorldGenCommand extends CommandBase {
     @Override
     public boolean checkPermission(MinecraftServer server, ICommandSender sender)
     {
-    	// TODO
-    	return true;
+    	if (MinecraftServer.class.isInstance(sender)){return true;}
+    	if (EntityPlayerMP.class.isInstance(sender)){
+    		//FIXME check if player is OP
+    		
+    		String[] ops = server.getServer().getPlayerList().getOppedPlayers().getKeys();
+    		if (Arrays.asList(ops).contains(sender.getName())){
+    			return true;
+    		}
+    	}
+    	return false;
 	}
     
 	@Override
