@@ -26,7 +26,7 @@ class FWGGenerationJob {
 	
 	FWGGenerationJob(World world, int lowX, int lowY, int highX, int highY, ICommandSender sender){
 		ticket = ForgeChunkManager.requestTicket(ForgeWorldGen.instance, world, Type.NORMAL);
-		chunks = new ArrayList<ChunkPos>(highX-lowX*highY-lowY);
+		chunks = new ArrayList<ChunkPos>(Math.abs(highX-lowX)*Math.abs(highY-lowY));
 		this.sender = sender;
 		
 		MinecraftForge.EVENT_BUS.register(this);
