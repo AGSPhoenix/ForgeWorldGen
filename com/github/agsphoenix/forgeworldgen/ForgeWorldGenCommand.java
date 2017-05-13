@@ -38,7 +38,7 @@ class ForgeWorldGenCommand extends CommandBase {
     
 	@Override
 	public String getUsage(ICommandSender sender) {
-		return "/fwg worldID lowX lowY highX highX";
+		return "/fwg worldID lowX lowY highX highY";
 	}
 	
 	@Override
@@ -46,7 +46,7 @@ class ForgeWorldGenCommand extends CommandBase {
     {
         if (args.length != 5)
         {
-            throw new WrongUsageException("/fwg worldID lowX lowY highX highX");
+            throw new WrongUsageException("/fwg worldID lowX lowY highX highY");
         }
         
         //TODO
