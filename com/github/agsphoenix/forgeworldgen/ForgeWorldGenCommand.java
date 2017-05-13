@@ -48,7 +48,7 @@ class ForgeWorldGenCommand extends CommandBase {
     
 	@Override
 	public String getUsage(ICommandSender sender) {
-		return "/fwg worldID lowX lowY highX highY";
+		return "/fwg worldID lowX lowZ highX highZ";
 	}
 	
 	@Override
@@ -56,16 +56,16 @@ class ForgeWorldGenCommand extends CommandBase {
     {
         if (args.length != 5)
         {
-            throw new WrongUsageException("/fwg worldID lowX lowY highX highY");
+            throw new WrongUsageException("/fwg worldID lowX lowZ highX highZ");
         }
         
         //TODO
         int lowX = Integer.parseInt(args[1]);
-        int lowY = Integer.parseInt(args[2]);
+        int lowZ = Integer.parseInt(args[2]);
         int highX = Integer.parseInt(args[3]);
-        int highY = Integer.parseInt(args[4]);
+        int highZ = Integer.parseInt(args[4]);
         
-        new FWGGenerationJob(getWorldFromName(args[0]), lowX, lowY, highX, highY, sender);        
+        new FWGGenerationJob(getWorldFromName(args[0]), lowX, lowZ, highX, highZ, sender);
     }
 	
 	World getWorldFromName(String s){

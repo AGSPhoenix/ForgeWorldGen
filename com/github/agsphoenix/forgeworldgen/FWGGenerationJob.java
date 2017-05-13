@@ -24,14 +24,14 @@ class FWGGenerationJob {
 	ICommandSender sender;
 	
 	
-	FWGGenerationJob(World world, int lowX, int lowY, int highX, int highY, ICommandSender sender){
+	FWGGenerationJob(World world, int lowX, int lowZ, int highX, int highZ, ICommandSender sender){
 		ticket = ForgeChunkManager.requestTicket(ForgeWorldGen.instance, world, Type.NORMAL);
-		chunks = new ArrayList<ChunkPos>(Math.abs(highX-lowX)*Math.abs(highY-lowY));
+		chunks = new ArrayList<ChunkPos>(Math.abs(highX-lowX)*Math.abs(highZ-lowZ));
 		this.sender = sender;
 		
 		MinecraftForge.EVENT_BUS.register(this);
 		for (int i = lowX; i < highX; i++) {
-			for (int j = lowY; j < highY; j++) {
+			for (int j = lowZ; j < highZ; j++) {
 				// is this an off by one? FIXME
 				chunks.add(new ChunkPos(i,j));
 			}
