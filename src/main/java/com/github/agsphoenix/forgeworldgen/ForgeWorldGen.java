@@ -9,7 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.server.command.ForgeCommand;
 
-@Mod(modid = ForgeWorldGen.MODID, version = ForgeWorldGen.VERSION, name = ForgeWorldGen.NAME)
+@Mod(modid = ForgeWorldGen.MODID, version = ForgeWorldGen.VERSION, name = ForgeWorldGen.NAME, acceptableRemoteVersions = "*")
 public class ForgeWorldGen {
 	@Mod.Instance(ForgeWorldGen.MODID)
     public static ForgeWorldGen instance;
