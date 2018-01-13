@@ -10,8 +10,6 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.math.ChunkPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.DimensionManager;
@@ -26,37 +24,37 @@ class ForgeWorldGenCommand extends CommandBase {
      * Gets the name of the command
      */
     @Override
-    public String getName()
+    public String getCommandName()
     {
         return "fwg";
     }
     
-    @Override
-    public boolean checkPermission(MinecraftServer server, ICommandSender sender)
-    {
-    	if (MinecraftServer.class.isInstance(sender)){return true;}
-    	if (EntityPlayerMP.class.isInstance(sender)){
-    		//FIXME check if player is OP
-    		
-    		String[] ops = server.getServer().getPlayerList().getOppedPlayers().getKeys();
-    		if (Arrays.asList(ops).contains(sender.getName())){
-    			return true;
-    		}
-    	}
-    	return false;
-	}
+//    @Override
+//    public boolean checkPermission(MinecraftServer server, ICommandSender sender)
+//    {
+//    	if (MinecraftServer.class.isInstance(sender)){return true;}
+//    	if (EntityPlayerMP.class.isInstance(sender)){
+//    		//FIXME check if player is OP
+//    		
+//    		String[] ops = server.getServer().getPlayerList().getOppedPlayers().getKeys();
+//    		if (Arrays.asList(ops).contains(sender.getName())){
+//    			return true;
+//    		}
+//    	}
+//    	return false;
+//	}
     
 	@Override
-	public String getUsage(ICommandSender sender) {
+	public String getCommandUsage(ICommandSender sender) {
 		return "/fwg worldID lowX lowZ highX highZ";
 	}
 	
 	@Override
-    public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
+    public void processCommand(ICommandSender sender, String[] args) throws CommandException
     {
         if (args.length != 5)
         {
-            throw new WrongUsageException("/fwg worldID lowX lowZ highX highZ");
+            throw new WrongUsageException("Usage: /fwg worldID lowX lowZ highX highZ");
         }
         
         //TODO

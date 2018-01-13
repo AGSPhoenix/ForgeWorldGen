@@ -2,11 +2,11 @@ package com.github.agsphoenix.forgeworldgen;
 
 import net.minecraft.init.Blocks;
 import net.minecraftforge.common.ForgeChunkManager;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.server.command.ForgeCommand;
 
 @Mod(modid = ForgeWorldGen.MODID, version = ForgeWorldGen.VERSION, name = ForgeWorldGen.NAME)
@@ -15,7 +15,7 @@ public class ForgeWorldGen {
     public static ForgeWorldGen instance;
 	
     public static final String MODID = "forgeworldgen";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "0.1";
     public static final String NAME = "ForgeWorldGen";
 
     static org.apache.logging.log4j.Logger logger;
