@@ -1,0 +1,16 @@
+[
+{
+  "modid": "forgeworldgen",
+  "name": "ForgeWorldGen",
+  "description": "Simple world generator",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["AGSPhoenix"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
