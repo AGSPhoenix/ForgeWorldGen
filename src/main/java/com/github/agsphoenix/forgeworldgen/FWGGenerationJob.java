@@ -76,6 +76,7 @@ public class FWGGenerationJob {
 			for (ChunkCoordIntPair chunkPos : ticket.getChunkList()) {
 				ForgeChunkManager.unforceChunk(ticket, chunkPos);
 			}
+			ForgeChunkManager.releaseTicket(ticket);
 		}
 		
 		
